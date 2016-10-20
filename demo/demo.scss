@@ -44,8 +44,12 @@ body {
 // MY COMPONENT
 //=====================================*/
 .my-component {
-
+  @include grid();
 	.my-component-block {
+    @include column('1/8');
+    @include respond-below(xxl) {@include column('1/4');}
+    @include respond-below(m) {@include column('1/2');}
+    @include respond-below(s) {@include column('1/1', $gutter: true);}
 	}
 }
 
@@ -53,10 +57,14 @@ body {
 // MY SECOND COMPONENT
 //=====================================*/
 .my-second-component {
-
-	.my-second-component-main {
-	}
-	.my-second-component-aside {
+  @include grid();
+  .my-second-component-main {
+    @include icon('fa-caret-right', $margin: 0 10px 0 0);
+    @include column('auto');
+  }
+  .my-second-component-aside {
+    @include icon('fa-caret-right', $margin: 0 10px 0 0);
+    @include column('250px');
 	}
 }
 

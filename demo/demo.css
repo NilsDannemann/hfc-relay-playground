@@ -10537,6 +10537,167 @@ body .demo-image {
 /*
 /*
 /* =======================================*/
+.my-component {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.my-component .my-component-block {
+  /* =======================================*/
+  /* OUTPUT COLUMN STYLES
+  /* =======================================*/
+  width: calc(99.999999% * (1/8));
+  flex: none;
+  /* =======================================*/
+  /* DEBUG GRID FUNCTION
+  /* =======================================*/
+}
+.my-component .my-component-block:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+.my-component .my-component-block:last-child {
+  margin-right: 0;
+}
+.my-component .my-component-block:nth-child(8n) {
+  margin-right: 0;
+}
+@media only screen and (max-width: 1285px) {
+  .my-component .my-component-block {
+    /* =======================================*/
+    /* OUTPUT COLUMN STYLES
+    /* =======================================*/
+    width: calc(99.999999% * (1/4));
+    flex: none;
+    /* =======================================*/
+    /* DEBUG GRID FUNCTION
+    /* =======================================*/
+  }
+  .my-component .my-component-block:nth-child(1n) {
+    float: left;
+    clear: none;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  .my-component .my-component-block:last-child {
+    margin-right: 0;
+  }
+  .my-component .my-component-block:nth-child(4n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .my-component .my-component-block {
+    /* =======================================*/
+    /* OUTPUT COLUMN STYLES
+    /* =======================================*/
+    width: calc(99.999999% * (1/2));
+    flex: none;
+    /* =======================================*/
+    /* DEBUG GRID FUNCTION
+    /* =======================================*/
+  }
+  .my-component .my-component-block:nth-child(1n) {
+    float: left;
+    clear: none;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  .my-component .my-component-block:last-child {
+    margin-right: 0;
+  }
+  .my-component .my-component-block:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 485px) {
+  .my-component .my-component-block {
+    /* =======================================*/
+    /* OUTPUT COLUMN STYLES
+    /* =======================================*/
+    width: calc(99.999999% * (1/1) - (20px - 20px * (1/1)));
+    flex: none;
+    /* =======================================*/
+    /* DEBUG GRID FUNCTION
+    /* =======================================*/
+  }
+  .my-component .my-component-block:nth-child(1n) {
+    float: left;
+    clear: none;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .my-component .my-component-block:last-child {
+    margin-right: 0;
+  }
+  .my-component .my-component-block:nth-child(1n) {
+    margin-right: 0;
+  }
+}
+
+.my-second-component {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.my-second-component .my-second-component-main {
+  /* =======================================*/
+  /* OUTPUT COLUMN STYLES
+  /* =======================================*/
+  flex: 1;
+  /* =======================================*/
+  /* DEBUG GRID FUNCTION
+  /* =======================================*/
+}
+.my-second-component .my-second-component-main::before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 10px 0 0;
+}
+.my-second-component .my-second-component-main:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+.my-second-component .my-second-component-main:last-child {
+  margin-right: 0;
+}
+.my-second-component .my-second-component-aside {
+  /* =======================================*/
+  /* OUTPUT COLUMN STYLES
+  /* =======================================*/
+  width: 250px ;
+  flex: none;
+  /* =======================================*/
+  /* DEBUG GRID FUNCTION
+  /* =======================================*/
+}
+.my-second-component .my-second-component-aside::before {
+  content: "";
+  font-family: "FontAwesome";
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0 10px 0 0;
+}
+.my-second-component .my-second-component-aside:nth-child(1n) {
+  float: left;
+  clear: none;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+.my-second-component .my-second-component-aside:last-child {
+  margin-right: 0;
+}
+
 /* =======================================*/
 /*
 /*
