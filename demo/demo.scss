@@ -59,7 +59,7 @@ body {
 .my-second-component {
   @include grid();
   .my-second-component-main {
-    @include icon('fa-caret-right', $margin: 0 10px 0 0);
+    @include icon('fa-caret-right',  $margin: 0 10px 0 0);
     @include column('auto');
   }
   .my-second-component-aside {
