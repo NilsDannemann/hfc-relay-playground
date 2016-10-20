@@ -1,0 +1,132 @@
+//=====================================*/
+// IMPORTS
+//=====================================*/
+@import "../playground.variables.scss";
+@import "../playground.scss";
+
+
+
+
+
+
+/* =======================================*/
+/*
+/*
+/* DEMO STYLES
+/*
+/*
+/* =======================================*/
+body {
+	@include container();
+	@include respond-below(xxl) {padding: 0 $whitespace;}
+	margin-bottom: ($whitespace*10);
+	h3 {border-top: $border; text-align: center; padding: $whitespace 0 ($whitespace*0.5) 0; margin-top: ($whitespace*2);}
+	div {padding: $whitespace; border: $border; background: $color-grey;}
+	.demo-title {text-align: center; margin: ($whitespace*10) auto 0 auto; font-size: $font-size-xxl;}
+	.demo-subtitle {text-align: center; margin: auto; font-size: $font-size-xl;}
+	.demo-image {display: block; margin: auto; padding: ($whitespace*3) 0 ($whitespace*2) 0;}
+}
+
+
+
+
+
+
+/* =======================================*/
+/*
+/*
+/* HFC RELAY
+/*
+/*
+/* =======================================*/
+
+//=====================================*/
+// MY COMPONENT
+//=====================================*/
+.my-component {
+
+	.my-component-block {
+	}
+}
+
+//=====================================*/
+// MY SECOND COMPONENT
+//=====================================*/
+.my-second-component {
+
+	.my-second-component-main {
+	}
+	.my-second-component-aside {
+	}
+}
+
+
+
+
+
+
+/* =======================================*/
+/*
+/*
+/* HFC RELAY FRAMEWORK
+/*
+/*
+/* =======================================*/
+
+//=====================================*/
+// HFC-DOWNLOAD COMPONENT
+//=====================================*/
+.hfc-download {
+  @include grid();
+
+  .download-container {
+    @include grid();
+    @include column('1/2', $gutter: true);
+    @include respond-below(s) {@include column('1/1', $gutter: true);}
+    background: #fff;
+    box-shadow: $box-shadow, $box-shadow-xl, $box-shadow-xxl;
+    border-left: 3px solid $color-brand;
+  }
+
+  .download-container-inner {
+    @include grid();
+    @include column('auto', $stacking: true);
+  }
+
+  .download-title {
+    @include grid($align: center, $justify: start, $wrap: nowrap);
+    padding: ($whitespace*0.75);
+    margin-bottom: 0;
+  }
+  .download-type {
+    font-size: $font-size-s;
+    font-family: $font-family-text;
+    padding: ($whitespace*0.25) ($whitespace*0.5);
+    margin-right: ($whitespace*0.5);
+    color: #fff;background: $color-brand;
+  }
+
+  .download-content {
+    width: 100%; //For: short content bug
+    padding: ($whitespace*0.75) $whitespace;
+    font-size: $font-size-s;
+    border-top: $border;
+  }
+
+  .download-controls{
+    @include grid($justify: space-between);
+    @include respond-below($app-mobile-breakpoint) {@include column('1/1'); border-top: $border;}
+    align-self: stretch;
+  }
+
+  .download-size,
+  .download-link{padding: ($whitespace*0.97) $whitespace; border-left: $border;}
+  .download-size{color: darken($color-grey, 25%); @include respond-below($app-mobile-breakpoint) {border: 0;}}
+  .download-link{
+    @include icon('fa-caret-right', $margin: 0 ($whitespace*0.5) 0 0);
+    cursor: pointer;
+    align-self: stretch;
+    @include transition();color: $color-brand;
+    &:hover {background: $color-brand;border-color: $color-brand;color: #fff;}
+  }
+}
